@@ -1,0 +1,21 @@
+{
+  "name": "smashinger",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./js/server/server.js",
+  "scripts": {
+    "start": "nodemon ./js/server/server.js"
+  },
+  "author": "saba manchkhashvili",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "jsdom": "^20.0.3",
+    "mongoose": "^6.7.3",
+    "nodemon": "^2.0.20",
+    "socket.io": "^4.5.4",
+    "socket.io-client": "^4.5.4"
+  }
+}
