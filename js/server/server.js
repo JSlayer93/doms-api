@@ -7,7 +7,7 @@ const regFunc = require("../serverFunc/reg")
 const logFunc = require("../serverFunc/logFunc")
 const { ShowUsers } = require("../serverFunc/Users.js")
 const cors = require("cors")
-const io = require("socket.io")(process.env.PORT2 || 4000, {
+const io = require("socket.io")(process.env.PORT || 3000, {
     cors: {
         origin: "*"
     }
