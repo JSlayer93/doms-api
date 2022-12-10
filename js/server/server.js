@@ -41,6 +41,9 @@ app.use(function(req, res, next) {
     next();
 });
 
+app.get(`/`, (req, res) => {
+    res.send("hi")
+})
 app.get(`/reg`, regFunc.reg)
 app.get(`/log`, logFunc.log)
 app.get(`/users`, ShowUsers)
