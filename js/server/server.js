@@ -7,7 +7,13 @@ const regFunc = require("../serverFunc/reg")
 const logFunc = require("../serverFunc/logFunc")
 const { ShowUsers } = require("../serverFunc/Users.js")
 const cors = require("cors")
-const io = require("socket.io")(process.env.PORT2 || 3000, {
+
+port = process.env.PORT
+var server = app.listen(port, () =>{
+    console.log(`listenin port ${port}`)
+})
+
+const io = require("socket.io")(server, {
     cors: {
         origin: "*"
     }
@@ -49,8 +55,3 @@ app.get(`/log`, logFunc.log)
 app.get(`/users`, ShowUsers)
 app.get(`/MSG`, MSGreciveFetch.fetchRecive)
 app.get(`/user`, Userfind.UserfindFunc)
-
-port = process.env.PORT
-app.listen(port, () =>{
-    console.log(`listenin port ${port}`)
-})
